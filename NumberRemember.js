@@ -14,9 +14,7 @@ if (Meteor.isClient) {
   });
 
   Template.addForm.events({
-    'click .btnAdd': function() {
-      console.log('ok');
-    },
+    
     'keypress input.newNumber': function(evt, template) {
       if (evt.which === 13) {
         var newNumber = template.find(".newNumber").value;
@@ -26,7 +24,7 @@ if (Meteor.isClient) {
         var existNumber = UniqueNumbers.findOne({
           value: newNumber
         });
- 
+
         if (!existNumber) {
           UniqueNumbers.insert({
             value: newNumber,
