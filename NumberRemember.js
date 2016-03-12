@@ -1,5 +1,7 @@
 var UniqueNumbers = new Mongo.Collection('uniquenumbers');
 
+
+
 if (Meteor.isClient) {
 
   Session.setDefault('status', "Welcome, folks! let's add new number ");
