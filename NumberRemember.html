@@ -1,0 +1,22 @@
+<head>
+  <title>NumberRemember</title>
+</head>
+
+<body>
+  <h1>Unique Number!</h1> {{> addForm}}
+</body>
+
+<template name="addForm">
+  <input type="text" name="name" value="" class="newNumber">
+  <button type="submit" name="button" class="btnAdd">Add</button>
+  <div>
+    <p>{{status}}</p>
+  </div>
+  <div>
+    <ul>
+      {{#each numbers}}
+      <li>{{value}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
